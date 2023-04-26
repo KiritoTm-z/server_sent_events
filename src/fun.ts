@@ -9,20 +9,20 @@ export function initSse() {
 
   source = new EventSource('http://127.0.0.1:9527/');
   source.onopen = (e: Event) => {
-    handleAlert('success', '已连接，正在接收数据')
-    console.log('onopen', e)
+    handleAlert('success', '已连接，正在接收数据中...')
+    // console.log('onopen', e)
   }
 
   source.addEventListener('foo', function(e: Event) {
-    console.log('自定义事件 foo', e)
+    // console.log('自定义事件 foo', e)
   })
 
   source.addEventListener('bar', function(e: Event) {
-    console.log('自定义事件 bar', e)
+    // console.log('自定义事件 bar', e)
   })
 
   source.onmessage = (e: MessageEvent<{ data: string }>) => {
-    console.log('onmessage', e)
+    // console.log('onmessage', e)
     handleClassChange('answering')
     document.querySelector('#showAnswer')!.setAttribute('class', 'answering')
     document.querySelector('#showAnswer')!.innerHTML += e.data
