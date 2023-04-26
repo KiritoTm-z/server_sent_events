@@ -23,11 +23,15 @@ cd server_sent_events
 
 # 安装依赖
 pnpm install
+或
+npm install
 
 # 运行项目
 # 启动两个终端，运行 pnpm start 启动 Node 服务端，运行 pnpm dev 启动客户端。
 pnpm start
 pnpm dev
-
+或
+npm run start
+npm run dev
 
 ```
