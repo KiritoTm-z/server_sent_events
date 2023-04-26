@@ -1,0 +1,27 @@
+{
+  "name": "sse-vite-ts",
+  "version": "0.0.0",
+  "type": "module",
+  "keywords": [
+    "Server-sent Events",
+    "SSE",
+    "chatGPT"
+  ],
+  "author": "Kirito",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "start": "esno src/service.ts",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.2.6",
+    "@types/node": "^18.16.1",
+    "typescript": "^5.0.2",
+    "vite": "^4.3.2"
+  },
+  "dependencies": {
+    "esno": "^0.16.3"
+  }
+}

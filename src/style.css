@@ -1,0 +1,30 @@
+#app {
+  width: 1200px;
+  margin: 0 auto;
+}
+@keyframes blink {
+  100% {
+    visibility: hidden;
+  }
+}
+.waitAns::after {
+  animation: blink 1s steps(5,start) infinite;
+  animation: attr(data-animation);
+  background-color: rgb(103, 107, 240);
+  content: "";
+  display: inline-block;
+  height: 4px;
+  vertical-align: bottom;
+  margin-left: 2px;
+  width: 10px;
+}
+.answering::after {
+  animation: attr(data-animation);
+  background-color: rgb(61, 66, 61);
+  content: "";
+  display: inline-block;
+  height: 4px;
+  vertical-align: bottom;
+  margin-left: 2px;
+  width: 10px;
+}
